@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('https://lh3.googleusercontent.com/d/1YYkX0F5RMFn7n8OgiEOpd9f-KJ45vbtB'); /* Placeholder para a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    background: rgba(255, 255, 255, 0.2); /* Fundo translúcido para glassmorphism */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    width: 900px;
+    max-width: 90%;
+    min-height: 500px;
+}
+
+.welcome-section,
+.login-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.welcome-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.7)); /* Gradiente de exemplo */
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+}
+
+.welcome-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.welcome-section h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
+}
+
+.create-account-btn {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.create-account-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.social-icons-welcome i {
+    font-size: 1.5em;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icons-welcome i:hover {
+    transform: scale(1.2);
+}
+
+.login-section {
+    background: rgba(255, 255, 255, 0.1); /* Fundo mais claro para a seção de login */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+}
+
+.login-section .logar-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(178, 174, 174, 0.3);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #423e3e;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-section .logar-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.login-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.input-group {
+    position: relative;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.input-group input {
+    justify-content: center;
+    padding: 12px 0px 12px 45px; /* Espaço para o ícone */
+    border: none;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto; 
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    color: #333;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+.input-group .fa-eye-slash {
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+}
+
+.options {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.options label {
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.options input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.options a {
+    color: #666;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    background: #2d2b2f; /* Cor principal do botão */
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.login-btn:hover {
+    background: #6A1BA0;
+}
+
+.social-icons-login i {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icons-login i:hover {
+    color: #8A2BE2;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .welcome-section,
+    .login-section {
+        border-radius: 0;
+    }
+
+    .welcome-section {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .login-section {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .login-section .logar-btn {
+        position: static;
+        margin-bottom: 20px;
+    }
+}
